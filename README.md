@@ -42,7 +42,7 @@ npm run dev
 
 ### Website
 
-Under development
+https://next-js-live-chat.vercel.app/
 
 ### Screens
 
