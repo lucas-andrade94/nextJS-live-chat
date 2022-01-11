@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
 
 import ChatLogo from "../assets/ChatLogo.webp";
 import BackgroundImage from "../assets/background.webp";
+import LeftArrow from "../assets/left-arrow.svg";
 
 function Login() {
   const { authenticate, signup, login, authError } = useMoralis();
@@ -16,6 +18,11 @@ function Login() {
       className="bg-black relative
     "
     >
+      <Head>
+        <title>Metaverse Live Chat</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="flex flex-col absolute top-0 bottom-0 my-auto z-50 h-4/6 w-full items-center justify-center space-y-6">
         {!loginEmail ? (
           <>
@@ -27,13 +34,13 @@ function Login() {
             />
             <button
               onClick={authenticate}
-              className="bg-yellow-500 rounded-lg p-5 w-[200px] font-bold animate-bounce"
+              className="bg-red-700 rounded-lg p-5 w-[200px] font-bold animate-bounce"
             >
               Login with MetaMask
             </button>
             <button
               onClick={() => setLoginEmail(true)}
-              className="bg-yellow-500 rounded-lg p-5 w-[200px] font-bold animate-bounce"
+              className="bg-red-700 rounded-lg p-5 w-[200px] font-bold animate-bounce"
             >
               Login with Email
             </button>
@@ -41,6 +48,16 @@ function Login() {
         ) : (
           <div className="flex flex-col justify-around w-[250px] sm:w-[350px] h-[350px] bg-[rgba(0,0,0,0.8)] p-4 text-white space-y-4">
             <div className="flex flex-col space-y-2">
+              <div>
+                <Image
+                  src={LeftArrow}
+                  alt="Back"
+                  height={20}
+                  width={20}
+                  className="cursor-pointer"
+                  onClick={() => setLoginEmail(false)}
+                />
+              </div>
               <label className="font-bold">Email</label>
               <input
                 type="email"
@@ -66,13 +83,13 @@ function Login() {
             )}
             <button
               onClick={() => login(email, password)}
-              className="bg-yellow-500 rounded-lg p-3 font-bold text-black opacity-100"
+              className="bg-red-700 rounded-lg p-3 font-bold text-black opacity-100"
             >
-              Login with Email
+              Login
             </button>
             <button
               onClick={() => signup(email, password, email)}
-              className="bg-yellow-500 rounded-lg p-3 font-bold text-black opacity-100"
+              className="bg-red-700 rounded-lg p-3 font-bold text-black opacity-100"
             >
               Register
             </button>
