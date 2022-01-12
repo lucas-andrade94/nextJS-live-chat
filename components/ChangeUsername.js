@@ -5,7 +5,7 @@ function ChangeUsername() {
 
   const setUsername = () => {
     const username = prompt(
-      `Enter your new Username (current: ${user.getUsername()})`
+      `Enter your new Username (current: ${user?.getUsername()})`
     );
 
     if (!username) return;

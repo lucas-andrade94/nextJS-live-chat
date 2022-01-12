@@ -6,7 +6,7 @@ import Avatar from "./Avatar";
 import ChangeUsername from "./ChangeUsername";
 
 function Header() {
-  const { user } = useMoralis();
+  const { user, logout } = useMoralis();
 
   console.log(user);
 
@@ -24,13 +24,19 @@ function Header() {
 
         <div className="col-span-6 text-left md:text-center py-5">
           <div className="relative h-48 w-48 md:mx-auto border-red-900 border-8 rounded-full">
-            <Avatar logoutOnPress />
+            <Avatar />
           </div>
 
           <h1 className="text-3xl">Welcome to the Metaverse</h1>
-          <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
+          <h2 className="text-5xl font-bold truncate">{user?.getUsername()}</h2>
 
           <ChangeUsername />
+          <button
+            className="text-sm absolute top-10 right-5 hover:text-red-400"
+            onClick={logout}
+          >
+            Logout
+          </button>
         </div>
       </div>
     </div>
