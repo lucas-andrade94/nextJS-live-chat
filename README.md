@@ -47,5 +47,6 @@ https://next-js-live-chat.vercel.app/
 ### Screens
 
 <div align="center">
-    <img alt="Login Screen" title="Login Screen" src=".github\screen-1.png?raw=true" width="200px" />
+    <img alt="Home Screen" title="Home Screen" src=".github\screen-1.png?raw=true" width="200px" />
+		<img alt="Chat Screen" title="Chat Screen" src=".github\screen-2.png?raw=true" width="200px" />
 </div>
