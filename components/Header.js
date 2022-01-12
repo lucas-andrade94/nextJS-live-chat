@@ -23,12 +23,12 @@ function Header() {
         </div>
 
         <div className="col-span-6 text-left md:text-center py-5">
-          <div className="relative h-48 w-48 md:mx-auto border-red-900 border-8 rounded-full">
+          <div className="relative h-40 w-40 sm:h-48 sm:w-48 md:mx-auto border-red-900 border-8 rounded-full">
             <Avatar />
           </div>
 
-          <h1 className="text-3xl">Welcome to the Metaverse</h1>
-          <h2 className="text-5xl font-bold truncate">{user?.getUsername()}</h2>
+          <h1 className="text-xl sm:text-3xl">Welcome to the Metaverse</h1>
+          <h2 className="text-2xl sm:text-5xl font-bold truncate">{user?.getUsername()}</h2>
 
           <ChangeUsername />
           <button

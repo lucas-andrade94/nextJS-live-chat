@@ -28,7 +28,7 @@ function Message({ message }) {
             : "rounded-bl-none bg-blue-400"
         }`}
       >
-        <p>{message.get("message")}</p>
+        <p className="truncate">{message.get("message")}</p>
       </div>
 
       <TimeAgo

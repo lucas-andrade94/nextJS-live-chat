@@ -5,7 +5,7 @@ import SendMessage from "./SendMessage";
 import Message from "./Message";
 
 // Only show messages from the last 60 minutes
-const MINS_DURATION = 60;
+const MINS_DURATION = 15;
 
 function Messages() {
   const endOfMessagesRef = useRef(null);
